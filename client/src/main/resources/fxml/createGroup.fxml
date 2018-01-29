@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.sepm.fridget.client.controllers.CreateGroupController">
+    <VBox prefHeight="500.0" prefWidth="320.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
+        <children>
+            <Label text="Create Group">
+                <font>
+                    <Font name="System Bold" size="17.0" />
+                </font>
+            </Label>
+            <Label text="Groupname">
+                <VBox.margin>
+                    <Insets top="14.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_groupName" />
+            <Label text="Base currency">
+                <VBox.margin>
+                    <Insets top="14.0"/>
+                </VBox.margin>
+            </Label>
+            <ComboBox fx:id="cbb_base_currency" prefWidth="150.0" promptText="Please select"/>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                   <Button mnemonicParsing="false" onAction="#handleCreate" text="Create" />
+            </children></HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                <VBox.margin>
+                    <Insets top="14.0" />
+                </VBox.margin>
+            </HBox>
+        </children>
+    </VBox>
+</AnchorPane>

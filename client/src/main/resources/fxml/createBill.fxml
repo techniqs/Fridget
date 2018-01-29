@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="at.ac.tuwien.sepm.fridget.client.controllers.CreateBillController">
+    <VBox prefHeight="500.0" prefWidth="320.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
+        <children>
+            <Label fx:id="lbl_title" text="Create Bill">
+                <font>
+                    <Font name="System Bold" size="17.0" />
+                </font>
+            </Label>
+            <Label fx:id="lbl_group" text="Group"/>
+            <ComboBox fx:id="cbb_group" prefWidth="150.0" />
+            <Label text="Title">
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="txt_title" />
+            <Label fx:id="lbl_group1" layoutX="10.0" layoutY="36.0" text="Amount">
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+                <TextField fx:id="txt_amount" promptText="0" HBox.hgrow="ALWAYS"/>
+                <Button mnemonicParsing="false" onAction="#handleUploadBill" text="Upload Bill">
+                    <HBox.margin>
+                        <Insets left="8.0"/>
+                    </HBox.margin>
+                </Button>
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label text="Currency"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lbl_base_currency" text="Base:" textAlignment="RIGHT" textFill="#747474">
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </Label>
+                </children>
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label style="-fx-background-color: #ecf0f1;" text="1">
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                    </Label>
+                    <ComboBox fx:id="cbb_currency" prefWidth="150.0" promptText="Please select">
+                        <HBox.margin>
+                            <Insets left="7.0"/>
+                        </HBox.margin>
+                    </ComboBox>
+                    <Label layoutX="10.0" layoutY="14.0" minWidth="9.0" prefWidth="9.0"
+                           style="-fx-background-color: #ecf0f1;" text="=">
+                        <HBox.margin>
+                            <Insets left="14.0"/>
+                        </HBox.margin>
+                    </Label>
+                    <TextField fx:id="txt_exchange_rate" promptText="Exchange rate">
+                        <HBox.margin>
+                            <Insets left="7.0" right="7.0"/>
+                        </HBox.margin>
+                    </TextField>
+                    <Label fx:id="lbl_base_currency_symbol" minWidth="9.0" prefWidth="9.0"
+                           style="-fx-background-color: #ecf0f1;" text="base"/>
+                </children>
+            </HBox>
+            <Label text="Share Technique">
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                <RadioButton fx:id="rb_even" mnemonicParsing="false" text="Even">
+                    <HBox.margin>
+                        <Insets right="20.0"/>
+                    </HBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="rb_percent" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Percentage">
+                    <HBox.margin>
+                        <Insets right="20.0"/>
+                    </HBox.margin>
+                </RadioButton>
+                <RadioButton fx:id="rb_absolute" layoutX="76.0" layoutY="12.0" mnemonicParsing="false" text="Manual"/>
+            </HBox>
+            <Label fx:id="lbl_users" text="Users">
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </Label>
+            <TableView fx:id="tbl_view_bill_shares" minHeight="160.0" prefHeight="160.0" prefWidth="200.0">
+                <columns>
+                    <TableColumn fx:id="tbl_column_bill_shares_select" prefWidth="23.0"/>
+                    <TableColumn fx:id="tbl_column_bill_shares_name" prefWidth="127.0" text="Name"/>
+                    <TableColumn fx:id="tbl_column_bill_shares_input" prefWidth="127.0"/>
+                </columns>
+            </TableView>
+            <Label text="Description">
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </Label>
+            <TextArea fx:id="txt_description" prefHeight="120.0" prefWidth="200.0"/>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                <VBox.margin>
+                    <Insets top="14.0" />
+                </VBox.margin>
+            </HBox>
+
+            <VBox>
+                <Label text="Tag" />
+                <ComboBox fx:id="cbb_tag" prefWidth="150.0" />
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </VBox>
+            <Button fx:id="btn" mnemonicParsing="false" onAction="#handleCreate" text="Create">
+                <VBox.margin>
+                    <Insets top="12.0"/>
+                </VBox.margin>
+            </Button>
+        </children>
+    </VBox>
+</AnchorPane>

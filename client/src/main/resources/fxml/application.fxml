@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="anchor_pane" minHeight="600.0" minWidth="800.0" prefHeight="768.0" prefWidth="1366.0"
+            style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="at.ac.tuwien.sepm.fridget.client.controllers.ApplicationController">
+    <GridPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: white;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.6666870117188" minWidth="10.0"
+                               prefWidth="225.66668701171875"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1209.6666412353516" minWidth="10.0"
+                               prefWidth="1140.3333129882812"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="70.0" minHeight="70.0" percentHeight="0.0" prefHeight="70.0" vgrow="NEVER"/>
+            <RowConstraints maxHeight="715.9999885559082" minHeight="10.0" prefHeight="673.6666717529297"
+                            vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" style="-fx-background-color: #2c3e50;"
+                  GridPane.rowIndex="1">
+                <children>
+                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCreateBill"
+                            style="-fx-background-color: #2c3e50; -fx-border-radius: 0; -fx-border: none;"
+                            text="Create Bill" textFill="WHITE">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </Button>
+                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleShowBills"
+                            style="-fx-background-color: #2c3e50; -fx-border-radius: 0; -fx-border: none;"
+                            text="Bill History" textFill="WHITE">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </Button>
+                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCreateGroup"
+                            style="-fx-background-color: #2c3e50; -fx-border-radius: 0; -fx-border: none;"
+                            text="Create Group" textFill="WHITE">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </Button>
+                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleListAllGroups"
+                            style="-fx-background-color: #2c3e50; -fx-border-radius: 0; -fx-border: none;"
+                            text="Manage Group" textFill="WHITE">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </Button>
+                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                            onAction="#handlePendingInvitations"
+                            style="-fx-background-color: #2c3e50; -fx-border-radius: 0; -fx-border: none;"
+                            text="Pending Invitations" textFill="WHITE">
+                        <font>
+                            <Font size="14.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                    </Button>
+                </children>
+                <padding>
+                    <Insets bottom="24.0" top="24.0"/>
+                </padding>
+                <GridPane.margin>
+                    <Insets/>
+                </GridPane.margin>
+            </VBox>
+            <Label text="Fridget">
+                <font>
+                    <Font name="System Bold" size="26.0"/>
+                </font>
+                <GridPane.margin>
+                    <Insets left="24.0"/>
+                </GridPane.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                <children>
+                    <Button fx:id="button_User" alignment="BASELINE_LEFT" onAction="#handleEditUser" prefHeight="100.0"
+                            prefWidth="240.0"
+                            style="-fx-background-color: #2ecc71; -fx-border-radius: 0; -fx-border: none; -fx-background-radius: 0;"
+                            text="Hello, User" textFill="WHITE">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                        <padding>
+                            <Insets left="24.0"/>
+                        </padding>
+                    </Button>
+                    <Region prefHeight="200.0" prefWidth="800.0"/>
+                    <Hyperlink onAction="#handleLogout" text="Logout">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                    </Hyperlink>
+                </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <children>
+                    <AnchorPane fx:id="pane_display" prefHeight="698.0" prefWidth="892.0"/>
+                    <VBox alignment="TOP_CENTER" maxHeight="698.0" prefHeight="698.0" prefWidth="236.0"
+                          style="-fx-background-color: #ecf0f1;">
+                        <children>
+                            <Label alignment="CENTER" text="Log">
+                                <font>
+                                    <Font name="System Bold" size="18.0"/>
+                                </font>
+                                <VBox.margin>
+                                    <Insets bottom="14.0" top="14.0"/>
+                                </VBox.margin>
+                            </Label>
+                            <ListView fx:id="list_view_log" maxHeight="560.0" maxWidth="210.0" minHeight="560.0"
+                                      prefHeight="560.0" prefWidth="210.0" style="-fx-background-color: #ecf0f1;"
+                                      styleClass="notification-list-view" stylesheets="@../css/fridget_client.css">
+                                <VBox.margin>
+                                    <Insets bottom="36.0"/>
+                                </VBox.margin>
+                            </ListView>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </children>
+    </GridPane>
+    <Region fx:id="veil" prefHeight="560.0" prefWidth="815.0" style="-fx-background-color: rgba(0, 0, 0, 0.3);"
+            visible="false"/>
+</AnchorPane>

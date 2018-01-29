@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="400.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="at.ac.tuwien.sepm.fridget.client.controllers.LoginController">
+    <children>
+        <Label layoutX="14.0" layoutY="17.0" text="Email Address:" AnchorPane.leftAnchor="14.0"
+               AnchorPane.topAnchor="14.0"/>
+        <TextField fx:id="emailField" layoutX="14.0" layoutY="37.0" onAction="#handleSubmit" prefHeight="25.0"
+                   prefWidth="275.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0"
+                   AnchorPane.topAnchor="34.0"/>
+        <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="98.0" onAction="#handleSubmit" prefHeight="25.0"
+                       prefWidth="275.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0"
+                       AnchorPane.topAnchor="94.0"/>
+        <Label layoutX="14.0" layoutY="76.0" text="Password:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="74.0"/>
+        <Button layoutX="240.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleLogin" text="Login"
+                AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0"/>
+        <Button layoutX="18.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleRegister" text="Create Account"
+                AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0"/>
+        <Hyperlink layoutX="189.0" layoutY="73.0" onAction="#handleForgotPassword"
+                   text="Forgot Password?" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="71.0"/>
+    </children>
+</AnchorPane>

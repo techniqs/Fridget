@@ -1,0 +1,28 @@
+.remove_blue_focus_border:focused {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0, 0, 0;
+}
+
+/* Notification log list view style */
+.notification-list-view {
+    -fx-padding: 3px;
+}
+
+.notification-list-view .list-cell {
+    -fx-padding: 7px;
+    -fx-background-color: transparent, -fx-background;
+    -fx-background-insets: 0px, 2px;
+    -fx-cell-size: 60px;
+}
+
+.notification-list-view .list-cell:empty {
+    -fx-padding: 2px;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* Hide scrollbar */
+.notification-list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}

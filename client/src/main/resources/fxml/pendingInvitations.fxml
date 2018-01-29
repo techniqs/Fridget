@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9"
+            fx:controller="at.ac.tuwien.sepm.fridget.client.controllers.PendingInvitationsController">
+    <children>
+        <ListView fx:id="listView_pendingInvitations" layoutX="38.0" layoutY="48.0" prefHeight="331.0"
+                  prefWidth="247.0"/>
+        <Label layoutX="75.0" layoutY="14.0" text="Pending Invitations" textFill="#d01414">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

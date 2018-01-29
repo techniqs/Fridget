@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="at.ac.tuwien.sepm.fridget.server.application.FridgetServer" />
+    <option name="VM_PARAMETERS" value="--add-opens java.base/java.lang=ALL-UNNAMED" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="server" />
+    <envs />
+    <method />
+  </configuration>
+</component>
