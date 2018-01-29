@@ -47,8 +47,12 @@ Links
 
 #### Contributors:
    Robert Böhm
+   
    Max Graf
+   
    Lukas Kühnert
+   
    Bianca Löhnert
+   
    Daniel Rasheed
 
