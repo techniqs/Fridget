@@ -45,3 +45,10 @@ Links
 
 - [GIT Guidelines](docs/git.md)
 
+#### Contributors:
+   Robert Böhm
+   Max Graf
+   Lukas Kühnert
+   Bianca Löhnert
+   Daniel Rasheed
+
